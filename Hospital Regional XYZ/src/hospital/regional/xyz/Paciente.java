@@ -22,10 +22,6 @@ public class Paciente {
     private String telefono;
     private String correo;
 
-    public Paciente()
-    {
-    
-    }
     
     public String getTelefono() {
         return telefono;
@@ -139,7 +135,7 @@ public class Paciente {
         " PATERNO "+ this.paterno +
         " MATERNO: "+this.materno +
         " FECHA DE NACIMIENTO: "+ this.fecha_nacimiento+ 
-        " T. SANGRE: "+ this.tipoSangre+
+        " TIPO SANGRE: "+ this.tipoSangre+
         " ALERGIAS: "+ this.alergias+ 
         " TELEFONO: "+ this.telefono+
         " CORREO: "+ this.correo);
