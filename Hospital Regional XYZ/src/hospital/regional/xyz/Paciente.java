@@ -22,6 +22,11 @@ public class Paciente {
     private String telefono;
     private String correo;
 
+    public Paciente()
+    {
+    
+    }
+    
     public String getTelefono() {
         return telefono;
     }
@@ -128,10 +133,15 @@ public class Paciente {
     
     
       public void verDatos(){
-        System.out.println("Persona TipoDoc: " + this.tipo_documento 
-                + " NroDoc: " + this.nro_documento 
-                + " Nombre: " + this.nombre + " Apellido paterno: " 
-                + this.paterno + " Apellido materno: " + this.materno 
-                + " Fecha de nacimiento: " + this.fecha_nacimiento);
+            System.out.println(" TIPODOC: "+ this.tipo_documento +
+        " NRODOC: "+ this.nro_documento +
+        " NOMBRE: "+ this.nombre +
+        " PATERNO "+ this.paterno +
+        " MATERNO: "+this.materno +
+        " FECHA DE NACIMIENTO: "+ this.fecha_nacimiento+ 
+        " T. SANGRE: "+ this.tipoSangre+
+        " ALERGIAS: "+ this.alergias+ 
+        " TELEFONO: "+ this.telefono+
+        " CORREO: "+ this.correo);
     }
 }
