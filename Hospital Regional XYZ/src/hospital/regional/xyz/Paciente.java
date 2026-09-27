@@ -19,21 +19,65 @@ public class Paciente {
     private LocalDate fecha_nacimiento;
     private String tipoSangre;
     private String alergias;
+    private String telefono;
+    private String correo;
 
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+         if(this.telefono.equalsIgnoreCase("DNI")){
+            if(nro_documento.length()==9){
+                this.nro_documento = nro_documento;
+            }else{
+                System.out.println("El numero de DNI debe de tener 8 digitos");
+            }
+         }
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+    
+    
     public String getTipo_documento() {
         return tipo_documento;
     }
 
     public void setTipo_documento(String tipo_documento) {
+        if(tipo_documento.equalsIgnoreCase("DNI") || tipo_documento.equalsIgnoreCase("C. E")){
         this.tipo_documento = tipo_documento;
+        }
+        else{     
+            System.out.println("El tipo de documento debe de ser DNI o Carnet de Extranjeria");
+        }
     }
-
     public String getNro_documento() {
         return nro_documento;
     }
 
     public void setNro_documento(String nro_documento) {
-        this.nro_documento = nro_documento;
+        if(this.tipo_documento ==null){
+            System.out.println("Primero debe de escoger el tipo de documento ");
+            return;
+        }
+        if(this.tipo_documento.equalsIgnoreCase("DNI")){
+            if(nro_documento.length()==8){
+                this.nro_documento = nro_documento;
+            }else{
+                System.out.println("El numero de DNI debe de tener 8 digitos");
+            }
+        }else if(this.tipo_documento.equalsIgnoreCase("C. E"))
+            if(nro_documento.length() == 10){            
+                this.nro_documento = nro_documento;
+            }else{
+                System.out.println("El numero de C. E debe de tener 10 digitos");
+            }     
     }
 
     public String getNombre() {
