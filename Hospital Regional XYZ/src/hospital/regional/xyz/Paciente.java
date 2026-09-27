@@ -27,13 +27,11 @@ public class Paciente {
     }
 
     public void setTelefono(String telefono) {
-         if(this.telefono.equalsIgnoreCase("DNI")){
-            if(nro_documento.length()==9){
-                this.nro_documento = nro_documento;
+            if(telefono.length()==9){
+                this.telefono = telefono;
             }else{
-                System.out.println("El numero de DNI debe de tener 8 digitos");
-            }
-         }
+                System.out.println("El numero de TELEFONO debe de tener 9 digitos");
+            }       
     }
 
     public String getCorreo() {
